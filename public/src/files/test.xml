@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Products xmlns="http://www.viator.com/vap">
+<VersionNo>1.0</VersionNo>
+<CreationDate/>
+<Product>
+<Rank>1</Rank>
+<ProductType>SITours_NEW</ProductType>
+<ProductCode>2280AAHT</ProductCode>
+<LanguageCode>de</LanguageCode>
+<TranslationLevel>90</TranslationLevel>
+<ProductName><![CDATA[Grand Canyon – All American-Hubschrauberflug]]></ProductName>
+<Introduction><![CDATA[Wir laden Sie ein zu einem aufregenden Hubschrauberrundflug vom Flughafen von Las Vegas aus zum Grand Canyon. Nach einem wunderschönen, 45-minütigen Rundflug landet der Hubschrauber in der Schlucht, wo ein Champagner Picknick stattfindet. Anschließend fliegen Sie zurück dicht über den prachtvoll beleuchteten Vegas Strip. Die Grand Canyon All American Helicopter Tour dauert einen halben Tag. Anschließend haben Sie also noch ausreichend Zeit, um sich in Las Vegas und Nevada umzuschauen.<p> <p> <strong>Diese Tour ist immer schnell ausgebucht!</strong> Die Grand Canyon All American Helicopter Tour ist regelmäßig Wochen im Voraus ausverkauft. Wir empfehlen also, so früh wie möglich zu buchen, damit Sie keine Enttäuschung erleben!<br/> <br/>Auf dem Flug im klimatisierten Hubschrauber zum Westrand über den Lake Las Vegas, Lake Mead und den Hoover Staudamm erleben Sie die landschaftliche Schönheit des Grand Canyon. Der Anblick dieses Hoover Staudamms aus der Luft, wie er eingebettet zwischen den Felswänden liegt, ist schon sehr beeindruckend. Während des Fluges hören Sie über Kopfhörer aufgezeichnete Beschreibungen des Grand Canyon und seiner Umgebung.<br/> <br/>In der Schlucht, etwa 960 Meter unter dem Rand, landen Sie zu einem unvergesslichen Sekt Picknick. Im Schatten eines indianischen Ramada genießen Sie Champagner und plaudern mit dem Piloten / Fremdenführer über den Grand Canyon, den Hubschrauberrundflug und was Sie sonst noch interessiert.<br/> <br/>Der Hubschrauberflug zum und über den Grand Canyon endet mit einem Tiefflug über die Westseite des berühmten Las Vegas Strip. Nach der Landung fahren Sie mit der bereit stehenden Limousine bequem in Ihr Hotel zurück.</p> <p>Nutzen Sie den EC-130-Hubschrauber für ein geräumigeres Erlebnis, da dieser größere Beinfreiheit bietet und mehr Gewicht pro Sitz aushalten kann. Unter „Weitere Infos“ erhalten Sie ausführlichere Informationen zu den Gewichtsbeschränkungen.</p> <p> <strong>Hinweis:</strong> Der angebotene Preis enthält nicht die Bearbeitungsgebühr von 49 USD pro Person, die beim Check-In für die Tour zu zahlen ist. Der Hubschrauber fasst maximal sechs Passagiere (zzgl. Pilot).</p> 
+                    <span class="vSpecial"><p>Sonderangebot - Wenn Sie einen Abflug um 07:00 Uhr buchen, sparen Sie 10% gegenüber dem Preis des Veranstalters vor Ort! - Jetzt buchen!</p></span>
+                ]]></Introduction>
+<ProductText><![CDATA[Wir laden Sie ein zu einem aufregenden Hubschrauberrundflug vom Flughafen von Las Vegas aus zum Grand Canyon. Nach einem wunderschönen, 45-minütigen Rundflug landet der Hubschrauber in der Schlucht, wo ein Champagner Picknick stattfindet. Anschließend fliegen Sie zurück dicht über den prachtvoll beleuchteten Vegas Strip. Die Grand Canyon All American Helicopter Tour dauert einen halben Tag. Anschließend haben Sie also noch ausreichend Zeit, um sich in Las Vegas und Nevada umzuschauen.
+                    <span class="vSpecial"><p>Sonderangebot - Wenn Sie einen Abflug um 07:00 Uhr buchen, sparen Sie 10% gegenüber dem Preis des Veranstalters vor Ort! - Jetzt buchen!</p></span>
+                ]]></ProductText>
+<SpecialDescription>
+                        &lt;span class="vSpecial"&gt;&lt;p&gt;Sonderangebot - Wenn Sie einen Abflug um 07:00 Uhr buchen, sparen Sie 10% gegenüber dem Preis des Veranstalters vor Ort! - Jetzt buchen!&lt;/p&gt;&lt;/span&gt;
+                    </SpecialDescription>
+<Special>1</Special>
+<Duration>3 Stunden 30 Minuten</Duration>
+<Commences>Las Vegas, Nevada</Commences>
+<ProductImage>
+<ThumbnailURL>http://cache-graphicslib.viator.com/graphicslib/thumbs75/2280/SITours/grand-canyon-all-american-hubschrauberflug-in-las-vegas-115053.jpg</ThumbnailURL>
+<ImageURL>http://cache-graphicslib.viator.com/graphicslib/2280/SITours/grand-canyon-all-american-hubschrauberflug-in-las-vegas-115053.jpg</ImageURL>
+</ProductImage>
+<Destination>
+<ID>684</ID>
+<Continent>North America</Continent>
+<Country>Vereinigten Staaten von Amerika</Country>
+<Region>Nevada</Region>
+<City>Las Vegas</City>
+<IATACode>LAS</IATACode>
+</Destination>
+<ProductCategories>
+<ProductCategory>
+<Group>Ausflüge per Flugzeug, Hubschrauber und Heißluftballon</Group>
+<Category>Hubschrauberflüge</Category>
+<Subcategory>Hubschrauberrundflug</Subcategory>
+</ProductCategory>
+</ProductCategories>
+<ProductURLs>
+<ProductURL>http://www.partner.viator.com/de/19630/tours/Las-Vegas/Grand-Canyon-All-American-Hubschrauberflug/d684-2280AAHT</ProductURL>
+</ProductURLs>
+<Pricing>
+<PriceAUD>478.75</PriceAUD>
+<PriceNZD>510.48</PriceNZD>
+<PriceEUR>310,06</PriceEUR>
+<PriceGBP>244.06</PriceGBP>
+<PriceUSD>345.99</PriceUSD>
+<PriceCAD>457.03</PriceCAD>
+<PriceCHF>344.71</PriceCHF>
+<PriceNOK>2 900,71</PriceNOK>
+<PriceJPY>37,870</PriceJPY>
+<PriceSEK>2886.72</PriceSEK>
+<PriceHKD>2754.66</PriceHKD>
+<PriceSGD>481.84</PriceSGD>
+<PriceZAR>5330.09</PriceZAR>
+</Pricing>
+<ProductStarRating>
+<AvgRating>5.0</AvgRating>
+<AvgRatingStarURL>http://www.partner.viator.com/images/stars/red/17-5.gif</AvgRatingStarURL>
+</ProductStarRating>
+<BookingType>FreesaleOnRequest</BookingType>
+<VoucherOption>VOUCHER_E</VoucherOption>
+</Product>
+<Product>
+<Rank>2</Rank>
+<ProductType>SITours_NEW</ProductType>
+<ProductCode>5022MOULIN</ProductCode>
+<LanguageCode>de</LanguageCode>
+<TranslationLevel>90</TranslationLevel>
+<ProductName><![CDATA[Paris – Varietévorstellung im Moulin Rouge]]></ProductName>
+<Introduction><![CDATA[Das Moulin Rouge bietet die besten Vorstellungen in Paris, wenn nicht gar in ganz Europa. Kein Wunder, dass es immer schnell ausverkauft ist! Verpassen Sie nicht Ihre Chance, die Vorstellung dieser weltberühmten Showgirls und Cancan-Tänzerinnen auf den historischen Bühnenbrettern des Moulin Rouge zu erleben.<p>Die Vorstellungen im Moulin Rouge Paris sind auf Monate im Voraus ausgebucht. Wenn Sie die Vorstellung „Féerie“ (105&nbsp;Minuten) im Moulin Rouge sehen möchten, bestellen Sie jetzt hier Ihre Tickets für die 21- oder 23-Uhr-Vorstellung (inklusive Sekt). Seit 110&nbsp;Jahren begrüßt das legendäre französische Varieté Millionen von Zuschauern, die sich für den berühmten französischen Cancan begeistern. Buchen Sie frühzeitig, um Enttäuschungen zu vermeiden.<br> <br>Das Moulin Rouge wurde durch den Cancan weltweit bekannt und wurde unter anderem in den Bildern des Malers Henri de Toulouse-Lautrec verewigt. Die üppigen Vorstellungen im Moulin Rouge bieten jede Menge Federn, Strasssteine und Pailletten, einzigartige Kulissen, Originalmusik und natürlich die schönsten Frauen der Welt!<br> <br>Viele internationale Stars haben schon auf der Bühne des Moulin Rouge gestanden, darunter Ella Fitzgerald, Liza Minnelli, Frank Sinatra und Elton John. Sie alle haben außergewöhnliche Vorstellungen veranstaltet, ganz in der Tradition französischer Stars wie Maurice Chevalier, Jean Gabin, Edith Piaf oder Yves Montand.<br> <br>Das Moulin Rouge Paris ist jeden Abend ausverkauft. Durch Vorbestellung der Tickets können Sie sich den Preis und die Sitze sichern, und Sie können Ihre wertvolle Zeit in Paris optimal nutzen.</p>]]></Introduction>
+<ProductText><![CDATA[Das Moulin Rouge bietet die besten Vorstellungen in Paris, wenn nicht gar in ganz Europa. Kein Wunder, dass es immer schnell ausverkauft ist! Verpassen Sie nicht Ihre Chance, die Vorstellung dieser weltberühmten Showgirls und Cancan-Tänzerinnen auf den historischen Bühnenbrettern des Moulin Rouge zu erleben.]]></ProductText>
+<SpecialDescription/>
+<Special>0</Special>
+<Duration>Unterschiedlich</Duration>
+<Commences>Paris, Frankreich</Commences>
+<ProductImage>
+<ThumbnailURL>http://cache-graphicslib.viator.com/graphicslib/thumbs75/5022/SITours/paris-variet-vorstellung-im-moulin-rouge-in-paris-116546.jpg</ThumbnailURL>
+<ImageURL>http://cache-graphicslib.viator.com/graphicslib/5022/SITours/paris-variet-vorstellung-im-moulin-rouge-in-paris-116546.jpg</ImageURL>
+</ProductImage>
+<Destination>
+<ID>479</ID>
+<Continent>Europe</Continent>
+<Country>Frankreich</Country>
+<Region>Ile de France und Paris</Region>
+<City>Paris</City>
+<IATACode>CDG</IATACode>
+</Destination>
+<ProductCategories>
+<ProductCategory>
+<Group>Shows, Konzerte &amp;amp; Sportveranstaltungen</Group>
+<Category>Theater, Shows &amp;amp; Musicals</Category>
+<Subcategory>Show</Subcategory>
+</ProductCategory>
+</ProductCategories>
+<ProductURLs>
+<ProductURL>http://www.partner.viator.com/de/19630/tours/Paris/Paris-Varietevorstellung-im-Moulin-Rouge/d479-5022MOULIN</ProductURL>
+</ProductURLs>
+<Pricing>
+<PriceAUD>175.94</PriceAUD>
+<PriceNZD>187.68</PriceNZD>
+<PriceEUR>112,00</PriceEUR>
+<PriceGBP>89.69</PriceGBP>
+<PriceUSD>129.39</PriceUSD>
+<PriceCAD>167.95</PriceCAD>
+<PriceCHF>126.72</PriceCHF>
+<PriceNOK>1 066,68</PriceNOK>
+<PriceJPY>13,920</PriceJPY>
+<PriceSEK>1061.50</PriceSEK>
+<PriceHKD>987.82</PriceHKD>
+<PriceSGD>177.15</PriceSGD>
+<PriceZAR>1961.59</PriceZAR>
+</Pricing>
+<ProductStarRating>
+<AvgRating>4.5</AvgRating>
+<AvgRatingStarURL>http://www.partner.viator.com/images/stars/red/17-4_5.gif</AvgRatingStarURL>
+</ProductStarRating>
+<BookingType>OnRequest</BookingType>
+<VoucherOption>VOUCHER_E</VoucherOption>
+</Product>
+</Products>
