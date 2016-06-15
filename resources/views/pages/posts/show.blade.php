@@ -27,16 +27,19 @@
                                                          alt="" style="width:300px;height:300px;"/>
                                                     <h4>{{$details['image_title']}}</h4>
                                                 @endif
-                                                {{--@if( ! empty($details['video']))--}}
-                                                    <video width="320" height="240" controls>
-                                                        <source src="/public/uploads/{{$details['video']}}"
-                                                                type="video/mp4">
-                                                        {{--<source src="/public/uploads/{{$details['video']}}"--}}
-                                                                {{--type="video/ogg">--}}
+                                                @if( ! empty($details['video']))
+                                                    {{--<video width="320" height="240" controls>--}}
+                                                    {{--<source src="/public/uploads/{{$details['video']}}"--}}
+                                                    {{--type="video/mp4">--}}
+                                                    {{--<source src="/public/uploads/{{$details['video']}}"--}}
+                                                    {{--type="video/ogg">--}}
 
-                                                        Your browser does not support HTML5 video.
-                                                    </video>
-                                                {{--@endif--}}
+                                                    {{--Your browser does not support HTML5 video.--}}
+                                                    {{--</video>--}}
+                                                    <iframe width="560" height="315"
+                                                            src="http://www.youtube.com/embed/{{$details['video']}}"
+                                                            frameborder="0" allowfullscreen></iframe>
+                                                @endif
 
                                                 @if(! empty($details['video_title']))
                                                     <h4>{{$details['video_title']}}</h4>

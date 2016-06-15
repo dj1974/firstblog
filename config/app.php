@@ -150,6 +150,7 @@ return [
         Laracasts\Flash\FlashServiceProvider::class,
         Orchestra\Parser\XmlServiceProvider::class,
         Intervention\Image\ImageServiceProvider::class,
+        Vinkla\Vimeo\VimeoServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -207,6 +208,7 @@ return [
         'Flash' => Laracasts\Flash\Flash::class,
         'XmlParser' => Orchestra\Parser\Xml\Facade::class,
         'Image' => Intervention\Image\Facades\Image::class,
+        'Vimeo' => Vinkla\Vimeo\Facades\Vimeo::class,
 
     ],
 

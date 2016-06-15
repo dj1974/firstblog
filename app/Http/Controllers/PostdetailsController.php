@@ -6,6 +6,7 @@ use App\Http\Requests;
 use App\Post;
 use App\Postdetails;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Input;
 use Intervention\Image\Facades\Image as Image;
 
 class PostdetailsController extends Controller
@@ -32,7 +33,6 @@ class PostdetailsController extends Controller
     {
         $post = Post::where('id', $post_id)->first();
 
-//        dd($post);
         $details = new Postdetails();
 
         if ($request->hasFile('image')) {
@@ -46,49 +46,20 @@ class PostdetailsController extends Controller
 
         $details->image_title = $request['image_title'];
 
-        if ($request->hasFile('video')) {
-            $video = $request->file('video');
-//            dd($video);
-            $name = $video->getClientOriginalName();
-            $n = $video->getBasename();
-            $e = $video->getRealPath();
-            $path = $video->getPath();
-//            dd($path);
-            $mime = $video->getClientMimeType();
-            $ext = $video->getClientOriginalExtension();
-            $destination = public_path() . '/uploads';
-//            dd($destination);
+        if (Input::has('video')) {
+            $link = $request['video'];;
 
-            $details->body = $request['body'];
-            $details->post_id = $post->id;
-            $details->video = $name;
-            $details->mime = $mime;
-            $details->video_title = $request['video_title'];
-
-//            dd($details);
-
-            $video->move($destination, $name);
-
-            $details->save();
-
-
+            if (strlen($link) > 11) {
+                $video = substr($link, strpos($link, "=") + 1);
+                $details->video = $video;
+                $details->video_title = $request['video_title'];
+            }
         }
-
+        $details->body = $request['body'];
+        $details->post_id = $post->id;
+        $details->save();
 
         return redirect()->route('post.show', ['post_id' => $post->id]);
     }
 
-
-//
-//    public function getVideo($details_id)
-//    {
-//        $details = PostDetails::where('id',$details_id)->first();
-////        dd($details);
-//        $file = new Filesystem();
-//        $content = $file->get(public_path('/src/video/posts/') . $details->video);
-//        $response = new Response();
-//        $response = $response->create($content, 200, ['Content-Type', "video/mp4"]);
-//        dd($response);
-//        return $response;
-//    }
 }

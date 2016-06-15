@@ -21,7 +21,7 @@
                 </div>
                 <div class="form-group">
                     <label for="video">If You Have Video:</label>
-                    <input class="form-control" type="file" name="video" id="video">
+                    <input class="form-control" type="text" name="video" id="video">
                 </div>
                 <div class="form-group">
                     <label for="video_title">Add Video Title:</label>
