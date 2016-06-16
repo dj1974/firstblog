@@ -10,13 +10,22 @@
         <section class="row new-post">
             <div class="container spark-screen">
                 <div class="col-md-6 col-md-offset-2">
-                    <header><h3>Post Name:</h3></header>
-                    <form action="{{ route('post.create') }}" method="post">
+                    <header><h3>Post:</h3></header>
+                    <form action="{{ route('post.create') }}" method="post" enctype="multipart/form-data">
                         <div class="form-group">
-                            <input class="form-control" id="name" name="name"/>
+                            <label for="name">Title of the Post:</label>
+                            <input class="form-control" type="text" id="name" name="name"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="post_image">Add title image of the Post:</label>
+                            <input class="form-control" type="file" id="post_image" name="post_image"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="description">Description:</label>
+                            <input class="form-control" type="text" id="description" name="description"/>
                         </div>
                         <button type="submit" class="btn btn-toolbar bar"><i class="fa fa-plus" aria-hidden="true"></i>
-                            Create Name
+                            Create Post
                         </button>
                         <input type="hidden" name="_token" value="{{ Session::token() }}">
                     </form>
@@ -30,18 +39,28 @@
                 <header><h3>Previous posts:</h3></header>
                 @foreach($posts as $post)
                     <article class="post" data-postid="{{$post->id}}">
-                        <h2>{{$post->name}}</h2>
+                        <h3>{{$post->name}}</h3>
+                        @if( ! empty($post->post_image))
+                            <a href="{{route('post.show',['post_id' => $post->id])}})"> <img
+                                        src="/src/image/posts/title/{{$post['post_image']}}"
+                                        alt="" style="width:300px;height:300px;"/></a>
+                        @endif
+                        <h5><a href="{{route('post.show',['post_id' => $post->id])}}" class="btn btn-toolbar bar"><i
+                                    class="fa fa-expand"
+                                    aria-hidden="true"></i> {{$post->description}}
+                        </a></h5>
 
                         <div class="info">
                             Posted by {{$post->user->first_name}} {{$post->user->last_name}} on {{$post->created_at}}
                         </div>
                         <div class="interactive">
                             @if(!Auth::check())
-                                <a href="{{route('login')}}" class="btn btn-toolbar"><i class="fa fa-sign-in"
-                                                                                        aria-hidden="true"></i> Login to
+                                <a href="{{route('login')}}" class="btn btn-toolbar bar"><i class="fa fa-sign-in"
+                                                                                            aria-hidden="true"></i>
+                                    Login to
                                     comment </a> |
                             @endif
-                            <a href="{{route('post.show',['post_id' => $post->id])}}" class="btn btn-toolbar"><i
+                            <a href="{{route('post.show',['post_id' => $post->id])}}" class="btn btn-toolbar bar"><i
                                         class="fa fa-eye" aria-hidden="true"></i>
                                 View</a>
 

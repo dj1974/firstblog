@@ -20,7 +20,6 @@ Route::group(['middleware' => ['web']], function () {
 });
 
 Route::get('/', function () {
-    Laracasts\Flash\Flash::success('Welcome Home Page!');
     return view('welcome');
 })->name('home');
 
@@ -59,11 +58,6 @@ Route::post('/update-image', [
     'uses' => 'UserController@postSaveImage',
     'as' => 'image.save'
 ]);
-//
-//Route::get('/user-image/{filename}' , [
-//   'uses' => 'UserController@getUserImage',
-//    'as' => 'account.image'
-//]);
 
 Route::post('/create-post', [
     'uses' => 'PostController@postCreatePost',
@@ -124,11 +118,7 @@ Route::post('post-details-save/{post_id}', [
     'uses' => 'PostdetailsController@saveDetails',
     'as' => 'save.details'
 ]);
-//
-//Route::get('get-video/{post_id , details_id}' , [
-//   'uses' => 'PostdetailsController@getVideo',
-//    'as' => 'get.video'
-//]);
+
 
 
 

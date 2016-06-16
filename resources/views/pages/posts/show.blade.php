@@ -12,7 +12,7 @@
                 <div class="col-md-12">
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            <h2>{{ $post->name}}</h2>
+                            <h3>{{ $post->name}}</h3>
                         </div>
 
                         <div class="panel-body">
@@ -28,14 +28,6 @@
                                                     <h4>{{$details['image_title']}}</h4>
                                                 @endif
                                                 @if( ! empty($details['video']))
-                                                    {{--<video width="320" height="240" controls>--}}
-                                                    {{--<source src="/public/uploads/{{$details['video']}}"--}}
-                                                    {{--type="video/mp4">--}}
-                                                    {{--<source src="/public/uploads/{{$details['video']}}"--}}
-                                                    {{--type="video/ogg">--}}
-
-                                                    {{--Your browser does not support HTML5 video.--}}
-                                                    {{--</video>--}}
                                                     <iframe width="560" height="315"
                                                             src="http://www.youtube.com/embed/{{$details['video']}}"
                                                             frameborder="0" allowfullscreen></iframe>
@@ -53,10 +45,11 @@
                                     </div>
                                 </div>
                             </section>
+                            @if(Auth::check() && Auth::user()->type == 'superuser')
+                                <a href="{{ route('create.details', $post->id) }}" class="btn btn-toolbar pull-left"><i
+                                            class="fa fa-pencil-square-o" aria-hidden="true"></i>Create details</a>
 
-                            <a href="{{ route('create.details', $post->id) }}" class="btn btn-toolbar pull-left"><i
-                                        class="fa fa-pencil-square-o" aria-hidden="true"></i>Create details</a>
-
+                            @endif
                             <a href="{{ route('dashboard') }}" class="btn btn-toolbar pull-right"><i
                                         class="fa fa-arrow-left"></i>
                                 Back</a>

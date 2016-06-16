@@ -13,6 +13,7 @@ use App\Post;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Laracasts\Flash\Flash;
+use Intervention\Image\Facades\Image as Image;
 
 
 class PostController extends Controller
@@ -49,17 +50,27 @@ class PostController extends Controller
     public function postCreatePost(Request $request)
     {
         $this->validate($request, [
-            'name' => 'required'
+            'name' => 'required',
+            'description' => 'required'
         ]);
 
         $post = new Post();
         $post->name = $request['name'];
+        $post->description = $request['description'];
+
+        if ($request->hasFile('post_image')) {
+            $image = $request->file('post_image');
+
+            $filename = $post->name . '.' . $image->getClientOriginalExtension();
+            Image::make($image)->resize(300, 300)->save(public_path('/src/image/posts/title/' . $filename));
+
+            $post->post_image = $filename;
+        }
 
 //        $message = 'There was an error!';
         if ($request->user()->posts()->save($post)) {
             Flash::success('Post successfully added!');
         }
-
         return redirect()->route('dashboard');
     }
 
@@ -104,9 +115,9 @@ class PostController extends Controller
     {
         $post = Post::findOrFail($post_id);
         $comments = Comment::where('post_id', $post->id)->orderBy('created_at', 'desc')->get();
- /*       $comment = $comments->first();
-        $user = $comment;
-        dd($comments);*/
+        /*       $comment = $comments->first();
+               $user = $comment;
+               dd($comments);*/
         $data = array(
             'post' => $post,
             'comments' => $comments
