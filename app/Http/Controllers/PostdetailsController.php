@@ -8,6 +8,7 @@ use App\Postdetails;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Input;
 use Intervention\Image\Facades\Image as Image;
+use Symfony\Component\HttpFoundation\File;
 
 class PostdetailsController extends Controller
 {
@@ -38,7 +39,7 @@ class PostdetailsController extends Controller
         if ($request->hasFile('image')) {
             $image = $request->file('image');
             $filename = $post->name . '-' . time() . '.' . $image->getClientOriginalExtension();
-            Image::make($image)->resize(300, 300)->save(public_path('/src/image/posts/' . $filename));
+            Image::make($image)->resize(560, 315)->save(public_path('/src/image/posts/' . $filename));
 //            dd($image);
             $details->image = $filename;
             $details->image_title = $request['image_title'];
@@ -55,8 +56,30 @@ class PostdetailsController extends Controller
                 $details->video_title = $request['video_title'];
             }
         }
+
         $details->body = $request['body'];
         $details->post_id = $post->id;
+
+        if ($request->hasFile('video')) {
+            $video = $request->file('video');
+            $name = $video->getClientOriginalName();
+            $mime = $video->getClientMimeType();
+            $dest = public_path() . '/src/video/posts/';
+
+            $details->mime = $mime;
+            $details->video = $name;
+            if ($video->isValid()) {
+                $video->move($dest, $name);
+//                $text = 'uspelo!';
+            }else{
+//                $text = 'nije uspelo';
+            }
+//            $video->move($dest, $name);
+
+
+
+        }
+
         $details->save();
 
         return redirect()->route('post.show', ['post_id' => $post->id]);

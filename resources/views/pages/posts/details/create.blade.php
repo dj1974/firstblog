@@ -20,8 +20,12 @@
                     <input class="form-control" type="text" name="image_title" id="image_title">
                 </div>
                 <div class="form-group">
-                    <label for="video">If You Have Video:</label>
-                    <input class="form-control" type="text" name="video" id="video">
+                    <label for="link_video">Link to you tube:</label>
+                    <input class="form-control" type="text" name="link_video" id="link_video">
+                </div>
+                <div class="form-group">
+                    <label for="video">Add Video:</label>
+                    <input class="form-control" type="file" name="video" id="video">
                 </div>
                 <div class="form-group">
                     <label for="video_title">Add Video Title:</label>

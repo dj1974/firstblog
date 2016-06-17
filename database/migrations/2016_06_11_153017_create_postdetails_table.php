@@ -17,10 +17,11 @@ class CreatePostdetailsTable extends Migration
             $table->integer('post_id');
             $table->string('image');
             $table->string('image_title');
-            $table->string('video');
+            $table->string('link_video');
             $table->string('video_title');
             $table->text('body');
             $table->string('mime');
+            $table->string('video');
         });
     }
 

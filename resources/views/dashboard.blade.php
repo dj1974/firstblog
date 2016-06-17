@@ -43,12 +43,11 @@
                         @if( ! empty($post->post_image))
                             <a href="{{route('post.show',['post_id' => $post->id])}})"> <img
                                         src="/src/image/posts/title/{{$post['post_image']}}"
-                                        alt="" style="width:300px;height:300px;"/></a>
+                                        alt="" style="width:560px;height:315px;"/></a>
                         @endif
-                        <h5><a href="{{route('post.show',['post_id' => $post->id])}}" class="btn btn-toolbar bar"><i
-                                    class="fa fa-expand"
-                                    aria-hidden="true"></i> {{$post->description}}
-                        </a></h5>
+                        <a href="{{route('post.show',['post_id' => $post->id])}}"
+                                class="btn btn-toolbar bar">{{$post->description}}
+                        </a>
 
                         <div class="info">
                             Posted by {{$post->user->first_name}} {{$post->user->last_name}} on {{$post->created_at}}

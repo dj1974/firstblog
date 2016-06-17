@@ -24,13 +24,21 @@
                                             <div class="pull-left">
                                                 @if( ! empty($details['image']))
                                                     <img src="/src/image/posts/{{$details['image']}}"
-                                                         alt="" style="width:300px;height:300px;"/>
+                                                         alt="" style="width:560px;height:315px;"/>
                                                     <h4>{{$details['image_title']}}</h4>
                                                 @endif
-                                                @if( ! empty($details['video']))
+                                                @if( ! empty($details['link_video']))
                                                     <iframe width="560" height="315"
-                                                            src="http://www.youtube.com/embed/{{$details['video']}}"
+                                                            src="http://www.youtube.com/embed/{{$details['link_video']}}"
                                                             frameborder="0" allowfullscreen></iframe>
+                                                @endif
+                                                @if(! empty($details['video']))
+                                                    <div id="video">
+                                                        <video controls="controls" width="560" height="315">
+                                                            <source src="/src/video/posts/{{$details['video']}}"
+                                                                    type="video/mp4">
+                                                        </video>
+                                                    </div>
                                                 @endif
 
                                                 @if(! empty($details['video_title']))
