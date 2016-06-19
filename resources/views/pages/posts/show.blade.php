@@ -32,17 +32,23 @@
                                                             src="http://www.youtube.com/embed/{{$details['link_video']}}"
                                                             frameborder="0" allowfullscreen></iframe>
                                                 @endif
-                                                @if(! empty($details['video']))
+                                                @if(! empty($details['video'] && $details->mime == 'video/mp4' ))
                                                     <div id="video">
                                                         <video controls="controls" width="560" height="315">
                                                             <source src="/src/video/posts/{{$details['video']}}"
                                                                     type="video/mp4">
                                                         </video>
+                                                        <h4>{{$details['video_title']}}</h4>
                                                     </div>
                                                 @endif
-
-                                                @if(! empty($details['video_title']))
-                                                    <h4>{{$details['video_title']}}</h4>
+                                                @if(! empty($details['video'] && $details->mime == 'audio/mp3' ))
+                                                    <div id="audio">
+                                                        <audio controls="controls" style="width:560px;">
+                                                            <source src="/src/video/posts/{{$details['video']}}"
+                                                                    type="audio/mp3">
+                                                        </audio>
+                                                        <h4>{{$details['video_title']}}</h4>
+                                                    </div>
                                                 @endif
                                                 @if( ! empty($details['body']))
                                                     <h3>{{$details['body']}}</h3>

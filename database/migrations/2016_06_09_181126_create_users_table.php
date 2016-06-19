@@ -24,6 +24,7 @@ class CreateUsersTable extends Migration
             $table->timestamps();
             $table->string('avatar')->default('default.jpg');
             $table->string('profession')->default('none');
+            $table->boolean('approved')->default('1');
         });
     }
 

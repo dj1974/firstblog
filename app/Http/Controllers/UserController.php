@@ -130,13 +130,41 @@ class UserController extends Controller
         return view('users.account', ['user' => Auth::user()]);
     }
 
-//    /**
-//     * @param $filename
-//     * @return Response
-//     */
-//    public function getUserImage($filename)
-//    {
-//        $file = Storage::disk('local')->get($filename);
-//        return new Response($file, 200);
-//    }
+    public function show()
+    {
+        $user = User::all();
+
+        $title = 'Users';
+        $data = array(
+            'user' => $user,
+            'title' => $title
+        );
+
+        return view('users.show')->with('data', $data);
+    }
+
+    public function showGuests()
+    {
+        $user = User::where('type', 'guest')->get();
+        $title = 'Guests';
+
+        $data = array(
+            'user' => $user,
+            'title' => $title
+        );
+        return view('users.show')->with('data', $data);
+    }
+
+    public function showAdmins()
+    {
+        $user = User::where('type', 'admin')->get();
+
+        $title = 'Admins';
+
+        $data = array(
+            'user' => $user,
+            'title' => $title
+        );
+        return view('users.show')->with('data', $data);
+    }
 }

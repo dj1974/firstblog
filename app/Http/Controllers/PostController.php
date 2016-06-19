@@ -39,7 +39,6 @@ class PostController extends Controller
 //        , 'books' => $books
         );
 
-        Flash::success('Welcome to Blog Page');
         return view('dashboard')->with($data);
     }
 

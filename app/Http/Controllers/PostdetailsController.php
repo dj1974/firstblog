@@ -68,6 +68,7 @@ class PostdetailsController extends Controller
 
             $details->mime = $mime;
             $details->video = $name;
+            $details->video_title = $request['video_title'];
             if ($video->isValid()) {
                 $video->move($dest, $name);
 //                $text = 'uspelo!';

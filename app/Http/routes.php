@@ -97,26 +97,42 @@ Route::get('/contact', [
     'middleware' => 'auth'
 ]);
 
-Route::post('create-comment/{post_id}', [
+Route::post('/create-comment/{post_id}', [
     'uses' => 'CommentController@postCreateComment',
     'as' => 'comment.create',
     'middleware' => 'auth'
 ]);
 
-Route::get('show-post/{post_id}', [
+Route::get('/show-post/{post_id}', [
     'uses' => 'PostController@show',
     'as' => 'post.show',
 ]);
 
-Route::get('post-details-create/{post_id}', [
+Route::get('/post-details-create/{post_id}', [
     'uses' => 'PostdetailsController@createDetails',
     'as' => 'create.details',
     'middleware' => 'auth'
 ]);
 
-Route::post('post-details-save/{post_id}', [
+Route::post('/post-details-save/{post_id}', [
     'uses' => 'PostdetailsController@saveDetails',
     'as' => 'save.details'
+]);
+
+Route::get('/show-user', [
+   'uses' =>'UserController@show',
+    'as' => 'users',
+    'middleware' =>'auth'
+]);
+
+Route::get('/show-guests' , [
+   'uses' => 'UserController@showGuests',
+    'as' =>'guests'
+]);
+
+Route::get('/show-admins' , [
+    'uses' => 'UserController@showAdmins',
+    'as' =>'admins'
 ]);
 
 
