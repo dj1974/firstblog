@@ -120,19 +120,24 @@ Route::post('/post-details-save/{post_id}', [
 ]);
 
 Route::get('/show-user', [
-   'uses' =>'UserController@show',
+    'uses' => 'UserController@show',
     'as' => 'users',
-    'middleware' =>'auth'
+    'middleware' => 'auth'
 ]);
 
-Route::get('/show-guests' , [
-   'uses' => 'UserController@showGuests',
-    'as' =>'guests'
+Route::get('/show-guests', [
+    'uses' => 'UserController@showGuests',
+    'as' => 'guests'
 ]);
 
-Route::get('/show-admins' , [
+Route::get('/show-admins', [
     'uses' => 'UserController@showAdmins',
-    'as' =>'admins'
+    'as' => 'admins'
+]);
+
+Route::post('/changeStatusCheckBox', [
+    'uses' => 'TaskController@checkBox',
+    'as' => 'changeStatus'
 ]);
 
 

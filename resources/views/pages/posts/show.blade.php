@@ -97,7 +97,7 @@
             <section class="row posts">
                 <div class="container spark-screen">
                     <div class="col-md-6 col-md-offset-2">
-                        <header><h3>Previous comments:</h3></header>
+                        <header><h3>Previous comments({{$count}}):</h3></header>
                         @foreach($comments as $comment)
                             <article class="post">
                                 <h5>{{$comment->content}}</h5>

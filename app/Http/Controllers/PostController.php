@@ -114,12 +114,14 @@ class PostController extends Controller
     {
         $post = Post::findOrFail($post_id);
         $comments = Comment::where('post_id', $post->id)->orderBy('created_at', 'desc')->get();
+        $count = $comments->count();
         /*       $comment = $comments->first();
                $user = $comment;
                dd($comments);*/
         $data = array(
             'post' => $post,
-            'comments' => $comments
+            'comments' => $comments,
+            'count' => $count
         );
         return view('pages.posts.show')->with($data);
     }

@@ -133,11 +133,13 @@ class UserController extends Controller
     public function show()
     {
         $user = User::all();
-
+        $count = $user->count();
         $title = 'Users';
+
         $data = array(
             'user' => $user,
-            'title' => $title
+            'title' => $title,
+            'count' => $count
         );
 
         return view('users.show')->with('data', $data);
@@ -146,11 +148,13 @@ class UserController extends Controller
     public function showGuests()
     {
         $user = User::where('type', 'guest')->get();
+        $count = $user->count();
         $title = 'Guests';
 
         $data = array(
             'user' => $user,
-            'title' => $title
+            'title' => $title,
+            'count' => $count
         );
         return view('users.show')->with('data', $data);
     }
@@ -158,12 +162,14 @@ class UserController extends Controller
     public function showAdmins()
     {
         $user = User::where('type', 'admin')->get();
+        $count = $user->count();
 
         $title = 'Admins';
 
         $data = array(
             'user' => $user,
-            'title' => $title
+            'title' => $title,
+            'count' => $count
         );
         return view('users.show')->with('data', $data);
     }
